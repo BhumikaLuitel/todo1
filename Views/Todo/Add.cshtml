@@ -1,6 +1,6 @@
 ﻿@model Todo
-<h1>Welome Here</h1>
-<form class="w-25" >
+<h3>Fill up your details</h3>
+<form class="w-25" asp-action="Add" method="post" >
     <div class="form-group">
     <label for="id"> ID:</label><br />
     <input class="form-control" id="id" type="number" name="id" /><br />
@@ -12,6 +12,8 @@
     <input class="bg-transparent" id="description" type="text" name="Description" /><br /><br />
     <label for="datetime"> Duration:</label><br />
     <input class="form-control" id="datetime" type="datetime" name="Duration" /> <br />
+    <label for="tel"> Telphone:</label><br />
+    <input class="form-control" id="tel" type="tel" name="Telephone" /><br />
     <button class="btn btn-primary">ADD</button>
     </div>
 </form>

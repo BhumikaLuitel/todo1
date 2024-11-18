@@ -7,5 +7,6 @@
         public string Work { get; set; }
         public string Desription { get; set; }
         public DateTime Duration   { get; set; }
+        public int  Telephone { get; set; }
     }
 }
