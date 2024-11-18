@@ -1,4 +1,4 @@
-﻿@model List<TodoApp.Models.Todo>
+﻿@model TodoApp.Models.Todo
 <h4>Index is here</h4>
 <table>
     <thead>
@@ -15,19 +15,19 @@
     </thead>
 
     <tbody>
-        @foreach (var m in Model)
+       @*  @foreach (var m in Model)
         {
-            <tr>
-                <td>@m.id</td>
-                <td>@m.Employee</td>
-                <td>@m.Work</td>
-                <td>@m.Desription</td>
-                <td>@m.Duration</td>
-                <td>@m.Telephone</td>
-                <td><a asp-action="upsert" asp-route-id="@m.id" class="btn btn-danger">Upsert </a></td>
-                <td><a asp-action="delete" asp-route-id="@m.id">Delete</a></td>
+          *@   <tr>
+                <td>@Model.id</td>
+                <td>@Model.Employee</td>
+                <td>@Model.Work</td>
+                <td>@Model.Desription</td>
+                <td>@Model.Duration</td>
+                <td>@Model.Telephone</td>
+                <td><a asp-action="upsert" asp-route-id="@Model.id" class="btn btn-danger">Upsert </a></td>
+                <td><a asp-action="delete" asp-route-id="@Model.id">Delete</a></td>
             </tr>
-        }
+        @* } *@
     </tbody>
 </table>
 

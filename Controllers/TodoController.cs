@@ -5,9 +5,9 @@ namespace TodoApp.Controllers
 {
     public class TodoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(Todo data)
         {
-            return View();
+            return View(data);
         }
         public IActionResult Add()
         {
@@ -17,10 +17,12 @@ namespace TodoApp.Controllers
         [HttpPost]
         public IActionResult Add (Todo data)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", data);
         }
         public IActionResult Upsert(int id)
         {
+
+            //db dekhi id lera todo ko data tanera view vitra bata pass gardine
              return View();
         }
         [HttpPost]
